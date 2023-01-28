@@ -1,0 +1,275 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding: var(--scroll-padding, 5rem); /* Variable que va a ser utilizada en js. */
+}
+
+body {
+    background-color: #dad7cd;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    text-align: center;
+    padding: 0.25rem;
+}
+
+h2 {
+    text-align: center;
+    padding: 0.25rem;
+}
+
+p {
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: 18px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+}
+
+.barranav {
+    position: fixed;
+    height: 70px;
+    width: 100%;
+    background-color: #588157;
+    z-index: 1; /* Esta propiedad pone la barra de navegacion por encima del resto de elementos */
+}
+
+.barranav-contenedor {
+    margin: 0;
+    padding: 0;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    list-style-type: none;
+    height: 100%;
+}
+
+.barranav-item {
+    border-right: 1px solid;
+}
+
+.barranav-item:last-child {
+    border-right: none;
+}
+
+.material-symbols-outlined { /* Iconos de la barra de navegacion */
+    position: relative;
+    top: 2.5px;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#introduccion {
+    padding-bottom: 1rem;
+    margin: 0;
+    width: 100%;
+    background-color: #dad7cd;
+}
+
+#introduccion h1 {
+    margin-top: 5rem;
+    font-size: 37px;
+    font-weight: bold;
+}
+
+#introduccion h2 {
+    padding: 0;
+    margin: 0;
+    font-size: 30px;
+}
+
+#introduccion p {
+    font-size: 25px;
+    margin: 5rem;
+}
+
+#experiencia {
+    background-color: #a3b18a;
+    text-align: center;
+}
+
+#experiencia h1 {
+    margin: 1rem;
+}
+
+#experiencia h2 {
+    text-align: center;
+    margin: 1rem;
+    font-weight: bold;
+}
+
+#experiencia h3 {
+    margin: 1rem;
+}
+
+#contacto {
+    background-color: #dad7cd;
+}
+
+#contacto h1 {
+    align-items: flex-start;
+}
+
+.lista-experiencia {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.lista-experiencia li {
+    margin: 0.5rem;
+}
+
+.lista-experiencia li span {
+    padding: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 0.5px solid;
+    background-color: white;
+}
+
+.proyecto-contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.proyecto {
+    background-color: white;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 0;
+    min-height: 475px;
+    width: 350px;
+    border: solid;
+    text-align: center;
+    border-radius: 3%;
+    overflow: hidden;
+}
+
+.proyecto p {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.proyecto h3 {
+    font-size: 27px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.imagen-proyecto {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+.img-1 {
+    background-image: url("https://media.gcflearnfree.org/content/5e31ca08bc7eff08e4063776_01_29_2020/ProgrammingIllustration.png");
+    object-fit: cover;
+}
+
+.img-2 {
+    background-image: url("https://www.clio.com/wp-content/uploads/2020/08/Clio_2020-Blog_Image-Programming_for_Lawyers-750x375.png");
+    object-fit: cover;
+}
+
+.img-3 {
+    background-image: url("https://media.istockphoto.com/id/1325756727/vector/programming-language-and-program-code-on-screen-laptop-programming-coding-php-html-c-css-js.jpg?s=1024x1024&w=is&k=20&c=ctO7LkNApsibFIRK5CgxbyEL4W4BBsZIzbCcOKsMZw4=");
+    object-fit: cover;
+}
+
+#contacto form {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacto-lista {
+    max-width: 500px;
+    
+}
+
+.contacto-lista li{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.contacto-lista  li  label {
+  flex: 1 0 120px;
+  max-width: 220px;
+}
+
+.contacto-lista > li > label + * {
+  flex: 1 0 220px;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .barranav-contenedor{
+        justify-content: center;
+    }
+    .barranav-item-link-texto {
+        display: none;
+    }
+
+    #introduccion p {
+        margin: 2rem;
+    }
+
+    .proyecto {
+        height: 25rem;
+    }
+
+    .proyecto {
+        margin: 1rem;
+    }
+
+}
+
+@media only screen and (min-width: 600px) {
+
+    .barranav-contenedor {
+        justify-content: flex-start;
+    }
+
+    .material-symbols-outlined {
+        left: -1px;
+    }
+
+    .barranav-item-link:hover {
+        transition: color 350ms ease;
+        color: yellow;
+    }
+
+}
